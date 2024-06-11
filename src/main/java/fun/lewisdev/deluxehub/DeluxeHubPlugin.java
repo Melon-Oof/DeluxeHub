@@ -49,17 +49,18 @@ public class DeluxeHubPlugin extends JavaPlugin {
         getLogger().log(Level.INFO, "");
         getLogger().log(Level.INFO, "Version: " + getDescription().getVersion());
         getLogger().log(Level.INFO, "Author: ItsLewizzz");
+        getLogger().log(Level.INFO, "Fork by: MelonOof/Melon1058");
         getLogger().log(Level.INFO, "");
 
         // Check if using Spigot
         try {
             Class.forName("org.spigotmc.SpigotConfig");
         } catch (ClassNotFoundException ex) {
-            getLogger().severe("============= SPIGOT NOT DETECTED =============");
-            getLogger().severe("DeluxeHub requires Spigot to run, you can download");
-            getLogger().severe("Spigot here: https://www.spigotmc.org/wiki/spigot-installation/.");
+            getLogger().severe("============= SPIGOT OR FORK NOT DETECTED =============");
+            getLogger().severe("DeluxeHub requires Spigot or one of its forks to run, you can download");
+            getLogger().severe("Paper here: https://papermc.io/downloads/paper. (A Spigot Fork)");
             getLogger().severe("The plugin will now disable.");
-            getLogger().severe("============= SPIGOT NOT DETECTED =============");
+            getLogger().severe("============= SPIGOT OR FORK NOT DETECTED =============");
             getPluginLoader().disablePlugin(this);
             return;
         }
